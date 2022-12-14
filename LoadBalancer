@@ -1,0 +1,3 @@
+Single point of entry
+Balances load using Round robbin algorithm
+Traffic is routed to healthy server only
