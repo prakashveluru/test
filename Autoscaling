@@ -1,0 +1,10 @@
+Launch template --> ELB --> Scaling Policy
+ELB will work Autoscaling
+
+Launch template --> Place were we define the configuration of our application
+
+
+By using multiple Az --> we acheive high availablity of our application
+
+Scale out --> adding servers
+scale in --> reduce servers
