@@ -1,3 +1,8 @@
 Single point of entry
 Balances load using Round robbin algorithm
 Traffic is routed to healthy server only
+
+
+Elastic load balancer - 
+
+ELB will use only 80/443 ports, if we open other ports also then load balancers will not use any other ports
