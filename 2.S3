@@ -1,0 +1,71 @@
+S3- Simple Storage Service 
+=====================================================================================================================================================================
+Storage Types
+ - EBS Elastic Block storage . It support below 
+    . object storage
+    . Block storage
+ - S3. It supports 
+    . Object based storage
+    
+ S3 characterstics
+  - Secure
+  - Durable
+  - Highly scalable
+
+EBS storage is limited
+S3 storage is unlimited
+
+In S3 we upload data using
+  - CLI - we can upload only 0 to 5GB file only at a time
+  - UI - we can upload only 0 to 5 TB file only at a time 
+
+Objects stored in S3 is knows buckets.
+
+S3 bucket name should be unqiue globally like email id.
+
+
+S3 gives
+--------------------------------------------------
+ - 99.99% availability
+ - 99.9999999% durability(duration of the object)
+ - Tiered Storage Availability
+    . Durability
+    . Availability
+    . Pricing
+    . Affordability/Requirements
+ - Life Cycle Management
+   . Life cycle will be applied on top of Tiered storage only
+ - Versioning
+ - Encryption
+    . KMS - Key Management Service - here will have key pair - that key pair will be protected by AWS , Aws will change the password regularly . This is expensive
+    . s3-Std - This we are managing our services. This is less expensive
+ - Secure our data using ACL(Access control lists) & Bucket policy
+ 
+ 
+ Bucket Policies-
+  - Default objects stored in bucket is private
+  - We can make bucket and objects to public by changing bucket policy 
+ 
+ ACL- 
+  - We have public bucket and we want keep few objects public and few of them in private then we can use ACL's
+  - ACL will give granullar level access
+  
+ Types of Tiers
+  - S3 standard
+  - S3 Intelligent Tiering
+  - S3 Standard IA
+  - S3 One Zone-IA(Infrequently Access)
+  - S3 Glacier( To get data need to wait for 2-5 hours)
+  - S3 Glacier Deep Archive(To get data we need to wait for 12 hours)
+
+S3 Charges based on below
+ - Stroage
+ - Request
+    . Uploading
+    . Downloadin
+ - Storage Management Pricing(Tiers)
+ - Data Transfer Pricing (manually)
+ - Transfer Acceleartion
+ - Cross Region Replication (Automatic)
+
+  
