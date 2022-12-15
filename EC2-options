@@ -1,0 +1,40 @@
+Status checks -->
+In status checks we are verifing 
+  i. Hardware
+  ii. Instances
+  
+1/2 passed - Instance is failed - due to virtuilization
+  - we can reboot, it will restart the process
+0/2 passed - both hardware and instance is failed 
+  - Reboot, this will detach existing instance and it will assign new instance 
+  
+===============================================================================================================================================
+
+Protection from accidental termination
+
+================================================================================================================================================
+
+Volumes
+
+SSD
+HHD
+
+
+====================================================================================================================================================
+Instance Type options
+
+ On Demand - when ever we want to launch server, this goes to ondemand
+ 
+ 
+ Reserved - Reserve some servers for some duration
+ Ex - Reserve machines for our application before decomissioning
+ 
+ 
+ Spot - Based on market price. Resources will be less used during off hours so we will get discount on the resouces during off hours. this type of process is know as spot 
+ instances
+ ex - share market
+ 
+ 
+ Dedicated Host - In dedicated host we are going to by all underlying hardware and all the instance present on it, we use this to avoid security issues.But this is
+ expensive.
+
