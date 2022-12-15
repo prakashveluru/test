@@ -1,0 +1,66 @@
+scale up/down-
+  - know as vertical scaling
+  - will be used for updating configurations like(CPU,RAM,EBS)
+  
+scale in/out- 
+  - Know as horizontal scaling
+  - will be used for increasing/descreasing no of machines 
+  - This scenario is mainly used in Autoscaling
+  
+To Increase/Decrease volume for EC2 then - stopping instance is not required
+To Increase/Decrease CPU/Ram resources then - we need to stop the instances
+
+For root volume we have snapshot, for attached volumes we will not have any snapshot
+snapshot here is instance - snapshot is created in backend and aws will attach the snapshot to root volume
+
+** we will not find instance snapshot in snapshots
+
+=================================================================================================================================================================
+AMI - Amazon machine image
+
+If we create ami 
+  - First snapshot will be created
+  - From snapshot, AMI will be created
+  
+If we copy AMI from 1 region to other region, then 
+  - Snapshot of that ami will be copied
+  - then ami will be copied to other region
+ 
+AMI takes time because it deals with booting process
+
+==================================================================================================================================================================
+*******
+
+Security groups/Keypairs are region specific
+
+======================================================================================
+
+SNAPSHOTS
+
+- We cannot copy volumes directly, so we will create snapshot out of it
+- By using snapshot we will create volumes
+- Copy the snapshot to other region
+- Create volume from snapshot by selecting region where our instance is present
+- Attach the volume to the instance
+
+From snapshot we can create 
+  - AMI  --> deals with root volume --> So taking snapshot will be slow
+  - Volume --> deals with non root volume --> So capturing snapshot will be fast
+  
+ 
+First we need to de-register AMI then we can delete snapshot in case 1
+
+=====================================================================================================================================================================
+
+Use case:
+
+I have machine with 2 volumes(8GB, 10GB) which includes root volume, we need to share the snapshot for the machine. How can we do it?
+
+Ans:
+Case 1: In case we can take snapshot with AMI with both volumes and then we can share the AMI
+Case 2: We can take snapshot for root volume independently and other volume independently then we can share AMI and snapshot
+
+In case1 creating AMI will take more time because booting process and os file structure is involved
+In case2 we are creating AMI seperately and volume snapshot seperatly the process will be more faster than case1.
+
+=====================================================================================================================================================================
