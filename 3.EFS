@@ -1,0 +1,59 @@
+EFS - Elastic File Sharing
+============================================================================================================================================================
+EFS comes under storage 
+EFS is sharing the file system
+EFS is Managed File storage for EC2
+
+Storage Types
+ - EBS
+   . Type -   Block & Object
+   . Capacity - Limited
+   . Attaching - Directly (EC2 ==EBS )
+   . Multiple Attaching - We cannot attach 1 EBS with multiple EC2 instances
+   EBS is like pendrive
+ - S3
+   . Type - Object based storage
+   . Capacity - Unlimited
+   . Attaching - In direct (we will use api or cli)
+   . Multiple Attaching - We can access from multiple resources at a time
+   S3 is like google drive
+ - EFS
+   . Type - Support both Block and Object, But in real case we will use 99% of Object storage
+   . Capacity - It is unlimited
+   . Attaching - We can attach EFS to EC2
+   . Multiple Attaching - We can attach 1 EFS to multiple Instances (1 EFS - Many EC2 instances)
+   
+============================================================================================================================================================
+Terminology
+ - Mount Point - Folder/Drive/Path
+   
+ - Mounting - Process of reflecting the data in actual path where we can access it
+ 
+Example:- 
+Assume we have pen drive and if we insert pendrive into windows machine then we can see the drive automatically this is know as Mount point
+Inside the drive we can see the data,the data is know as Mounting
+
+In Linux machine we need to do Mounting manually 
+===========================================================================================================================================================
+
+Here we will create 
+
+EC2 
+- Create EC2 instance
+- Create Mount point 
+- Create Mounting via EFS
+EC2 
+- Create EC2 instance
+- Create Mount point 
+- Create Mounting via EFS
+EFS
+- Create EFS
+
+==========================================================================================================================================================
+
+EFS will not connect to EC2 directly. For connecting we need to do 
+ 1. Insert NFS command 
+ 2. Give same secuirty group for EC2 and EFS 
+ 
+** EFS will not have any ports, as it is service
+
