@@ -1,0 +1,12 @@
+EBS - ELASTIC BEAN STACK
+=================================================================================================================================================================
+ - With EBS we can deploy, monitor, and scale an application easily and transparent
+ - EBS focus on performance not infrastructure like configuration and specifications
+ 
+ 
+EBS is free, but the resources created by EBS will be charged
+If we delete EBS application, resoucre created by EBS will also be deleted. 
+
+If we upload our code or sample code then 
+EBS will upload the code to S3 and from S3 it will launch other resources like EC2, secuirty group,DB and other.
+S3 here is used for versioning
