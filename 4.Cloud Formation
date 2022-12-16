@@ -1,0 +1,55 @@
+Cloud Formation
+===========================================================================================================================================================
+Cloud Formation is the automation for AWS. It will allow us to create code into infrastructure
+
+Infrastructure creation can be done
+1. GUI/Console
+2. CLI/Programmatic
+3. Code
+
+Cloud Formation script can be written in either 
+  - JSON
+  - YAML
+  
+Advantages 
+ - Versioning
+ - Reusablity
+ - Testable(like Dry-run)
+ 
+Disadvantage
+ - Complex for new learner
+ - Typo Errors(like space,.,;,_....)
+
+===================================================================================================================================================================
+Cloud formation will take care of the order for creating resources or provisioing
+Example:
+10-EC2 
+2- EBS
+1- EFS
+2- VPC
+4- Subnets
+
+In the above scenario we have not provided the order of resources we need to create. But Cloud Formation will create VPC first and Subnet and soon in order 
+
+===================================================================================================================================================================
+ 
+Cloud Fromation template(CFT)
+--------------------------------------------------------
+Code is know as template
+Template is the input and Stack(group of resources like EBS,EFS,EC2..) is the output
+
+Delete Template , it will automatically delete the stack created by template
+
+- By default the "automatic rollback on error" feature is enabled 
+- You are charged for rolled-back infrastructure
+Cloud Formation is free
+===================================================================================================================================================================
+
+
+LAMP - Linux Apache MySql Php
+
+ 
+ 
+ 
+ 
+ 
