@@ -64,8 +64,20 @@ S3 Charges based on below
     . Uploading
     . Downloadin
  - Storage Management Pricing(Tiers)
- - Data Transfer Pricing (manually)
- - Transfer Acceleartion
+ - Data Transfer Pricing (manually) --> For Copying from s3 to s3 we are using AWS Internet. So, we will charged for it.
+ - Transfer Acceleration
+   . Regions
+   . Available Zones
+   . Edge Locations --> Edge locations was invented for Cloud front/CDN and it is used for S3 also. In Edge location, AWS has high bandwidth
+         If we want to transfer data from Hyd to Us-east1 then 
+            - We will transfer out data to nearest edge locations. For each region we will have few edge locations
+            - From Edge location we will be using the AWS internet to send data to us-east-1 
+            - By this approach the data trasfer will be fast. Because we will be using AWS intenert instead of our internet for data trasfer. This approach is known as 
+            Transfer Acceleration   
+            - Transfer Acceleration will apply on the bucket.
  - Cross Region Replication (Automatic)
+    Data what ever we copy in our region we can copy it automatically into other region.
+
+S3 ----> is global service, but we need to create buckets in regions only
 
   
