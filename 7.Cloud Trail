@@ -1,0 +1,17 @@
+Cloud Trail ---> Is used for Auditing
+==================================================================================================================================================================
+Cloud Trail is used for tracking user activity 
+
+Events history - We can see logs for last 90 days only.
+
+Trails - By default we dont have any trails 
+ - Trails are used for capturing logs on daily basis and we can store for long 
+ - Trails are stored in S3
+ 
+Cloud trail is region specific,but we can keep track of multi regions aswell
+
+Limitations:
+------------
+
+we can create only 5 trails per region only.
+ 
