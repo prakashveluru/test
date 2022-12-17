@@ -1,0 +1,39 @@
+Cloud Front/CDN (Content Delivery Network)
+============================================================================================================================================================
+Cloud Front or CDN depends on Edge locations
+
+Regions =25+
+AZ = 25*3 =75
+Edge location = 25*5 =125
+
+Edge locations are used for cache the content of application/web application
+
+A Content delivery network(CDN) is a distributed servers(network)(Edge location) that delivers webpages and other web content to a user based on the different geographical
+location
+
+Terminology
+
+ - Edge locations: Edge location we are using for cache in CDN/CF. 
+ - Origin: The Origin is the place where our application is hosted. This is the origin of all files that CDN will distribute. It can be
+    . S3
+    . EC2
+    . ELB
+    . R53
+ - Distribute: It is a collection of Edge locations
+ 
+ With out CF/CDN the application will be loaded into your laptop. So the response time for our website if we are accessing out side of our geolocation will be low
+ If we have CF/CDN the application will be cached in nearest Edge locations and response time of our website will be high. Here also we will face some latency for first
+ customers only.
+ 
+ - Edge locations are not just read only we can write to it
+ 
+ ====================================================================================================================================================================
+ 
+ ET - Elastic Transcoder
+ ---------------
+ 
+ It is used from media coverting in cloud
+ 
+ ET is charged based on minutes and quality(resolution) example - video to audio
+ 
+    
