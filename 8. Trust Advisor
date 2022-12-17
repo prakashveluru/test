@@ -1,0 +1,19 @@
+Trust Advisor --> Trust Advisor will provide suggestions based on AWS best pratices
+Trust Advisor 
+
+Trust Advisor will give suggestions based on 
+ - Cost Optimization
+    . Days considered before giving suggestion is it will consider based on past 14 days
+    . Ideal Load Balancer
+    . UnderUtilized AWS EBS Volume
+    . Unassociated Elastic IP
+    . AWS RDS idle DB instance 
+ - Performance
+    . High Utilization of EC2 instances
+    . EBS Provided IOPS(SSD) volume Attachment configuration
+    .
+ - Security
+ - Fault tolerance
+ - Service limits
+ 
+ 
