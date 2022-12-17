@@ -1,0 +1,22 @@
+Cloudwatch is used for Monitoring mertics of Aws Resources.
+Cloudwatch is region specific
+======================================================================================================================================================================
+Monitoring
+ - Default (free) -5mins
+ - Granular (charged)
+ 
+ 
+Metrics:
+CPU, RAM,Memeory,HD, Stroage, Connections, Creation/update/delete of S3 Bucket, Health checks and so on
+
+Alarm
+ We will map Cloud watch(monitoring) with SNS(notification)
+ All services are integrated to Cloudwatch internally in some extent. If we need additional configuration we can customize it 
+ Alarm is specific to region
+
+Dashboard 
+ To monitor all services in 1 place
+
+Billing
+ Billing is alert is avaiable in only N.Virgina region(default region)
+ Billing is "account specific", so we can use it from where
