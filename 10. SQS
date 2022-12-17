@@ -1,0 +1,48 @@
+SQS - Simple Queue Service
+============================================================================================================================
+
+In simple term we call this as Message Queue Service or MQ service
+
+Queue - In order
+
+We use queue in below projects
+ - More message
+ - More logs
+ - Huge Transactions
+ - Payments
+
+SQS for 1 request size should not be more than 256 kb
+
+Web Server --> SQS --> Application Server --> DB
+
+Case 1: App server --> Visibility Time out(30 sec) -->Reply--> Web server --> User
+Case 2: APP server --> Visibility Time out(30 sec) -->Reply faile --> SQS will send it back to queue and process will repeat
+
+
+Queue types:
+ 1. Standard queue
+    . Default queue
+    . Message can go out of order
+    . Unlimited no of transactions per second
+ 2. FIFO
+    . Not Default queue
+    . Message will go in exact order
+    . 300 Transactions per second
+
+
+SQS points:
+1. SQS is pull based mechanism
+2. It works on decoupling mechanism
+3. Messages can contain upto 256KB of text in any format
+4. Message kept in queue for 14 days
+5. Default retention period is 4 days
+6. SQS gurantee that your messages will be processed atleast once. 
+
+
+SQS Long Polling:
+  1. It is a way to retrieve message from SQS queue
+  2. Polls the queue periodically as per the time interval we set
+  3. Long Polling can save you money
+ 
+ 
+ 
