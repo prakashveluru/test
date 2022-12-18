@@ -1,0 +1,142 @@
+RDS - Relational Database service
+----------------------------------------------------------------------------
+
+RDS Architecture is SQL - Structured Query language
+
+In Data base we store 
+  - data in Structured format
+     . In Table Structure
+
+RDS - 
+   - Capacity - Amount of data we can store
+   - Accessibility - Ease of accessing data
+   - Compatability - Support
+
+RDS Types
+ - MYSQL SERVER
+ - ORACLE
+ - SQL SERVER
+ - AURORA
+ - MARIA DB
+ - POSTGRE SQL
+   
+RDS we can take snapshot for backup, similar to EBS
+
+Snapshot in RDS
+1. Automatic
+2. Manual (DB Snapshot)
+
+Terminology
+----------------------------------------------------------------------------
+Default: enabled
+Nature of snapshot
+ . Incremental
+ . Full
+Retention Period
+ . Min
+ . Max
+ . Def
+Transaction Logs
+
+
+Automated snapshot
+------------------------
+ - Automated snapshot will be enabled by default
+ - Nature of automated snapshot is Full(both old data + new data)
+ Retention Period
+ . Min - 1 day
+ . Max - 35 days
+ . Def - 7 days
+ - In case of failure in with RDS
+   . AWS in automated snapshot it will take snapshot in incremental way 
+   . We can use the previous snapshot + Transaction log(Incremental snapshot) for creating new DB
+   . Incremental snapshot is know as Transaction logs
+   . Incremental snapshot will be deleted after snapshot is taken
+ - In Automated snapshot there will be no loss of data
+ - Automated snapshot will be delete automatically if we delete RDS
+ 
+Manual snapshot
+----------------------------------
+User will take snapshot manually
+Manual snapshot will not be deleted, if we delete RDS also. 
+We need to delete Manual snapshot 
+
+
+-------------
+In RDS, DNS will change everytime if we take backup from snapshot
+------------------
+ 
+RDS is region specific 
+
+-----
+
+
+In production --> 24/7 or 365 --> high availability --> can be acheived by --> Multiple Az's
+
+If RDS is down then there will be data loss 
+
+===================================================================================================================================================
+
+If we launch multiple DB's AWS will create connection between them for synchronus replication
+
+primary to secondary and vice versa
+
+Here at any point of time data present in primary and secondry both will be same. It is done by using synchronus replication
+
+Features of synchronus replication
+-------------------------------
+ . Data present in both primay and seconday is always same
+ . At point of time only 1 DB will be in active state
+     - Primary and secondary dbs have same dns end point, if any Db is down then we can use other DB so there will be no data loss.
+     - If both DB is down then DNS will be changed then new DNS should be updated with in the dev side too
+     
+Multi Az
+------------------------------------------------
+ . By using Multi Az, we can acheive high availability
+ . If we use Multi Az, DB's will work in cluster format
+ . It will have same end point for DB's
+ . Multi Az will mostly used in 
+      - planned DB maintenance
+      - DB instance failure
+      - AZ failure
+      In this scenario, AWS RDS will automatically failover to standby so that database operations can resume quickly without administrative(manual) intervention
+ . Both DB have same end point
+ 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Draw back in this approach is 
+
+If we have 5 million requests comming for the DB server in that case after handling few request our both DB's will go down. Due to load 
+Multi Az mechanism will not be helpfull for handling load, it only helps for high availability
+
+For this we will use READ REPLICA 
+-----------------------------------------------------------------------------------------
+
+Read Replica is equivalent DB, but this is not in same region. It is different region
+
+Read Replica will follow Asynchronous Replication. But there will be some latency, because all the Replicas are in different regions.
+Read Replica will keep track by Primary/Secondary DB
+we can have 5 Replicas only for any database
+Load will be transfer from Primay/Secondary DB to Replica
+
+Web server cannot connect to Read Replicas
+Read Replica will only used for Read operations
+Read Replicas are mainly used for read heavy database workloads
+Used for Scaling not for DR.
+We can have Read Replicas of Read Replicas 
+Each RR will have different DNS end point
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
