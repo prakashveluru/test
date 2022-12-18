@@ -1,0 +1,17 @@
+Type      RDS         Architecture      Storage
+RDS       Aurora      SQL               Structured(Row and Column)
+Non-RDS   Dynamo DB   No-SQL            Key Value
+
+For Dynamo DB we dont have ports to connect EC2 instance.(For RDS, we are using Security group to connect EC2 to DB).
+In Dynamo DB we are using IAM Roles, We will attach IAM role to EC2 instance and Dynamo for connection
+
+
+***** Alternative for access key and secrete key is IAM role
+Starting point of role is service. what level of access needed for that service 
+
+1. So we will create EC2-DynamoDB full access role
+2. Launch t2.medium(atleast) & attach IAM role & bootstrap Dynamo DB script & allow https ports
+3. Run 2 commands in /var/www/html
+    . AWS SDK for php
+    . composer
+    
