@@ -1,0 +1,45 @@
+Red shift is like a Data ware house.
+
+Data ware house is used to pull in very large and complex data sets. Usually used by management to do queries on data.
+
+Red shift is a fast and powerful, fully managed, petabyte-scale data ware house service in the cloud
+
+1. Query Timeout
+2. Capacity
+3. Analystics
+
+Red shift is region specific
+
+Terminology
+-----------------
+LN- Leader Node  --> Taken care by AWS
+CN - Compute Node --> Taken care by Leader Node ( client connections)
+
+
+Capactiy of CN is 160 GB, we can launch only 128 CN for DataWare House.
+
+Leader Node:
+
+1. LN is point of contact b/w webservice and CN
+2. LN is responsible for redirections(deciding which requests from Webservers has to be redirected to CN)
+3. LN is responsible for maintaing client connections. 
+4. Scalability of CN is also taken care by LN
+5. No data is stored in LN
+
+CN:
+
+1. Actual data is present in CN
+2. Analysists can be performed on CN
+
+
+OLTP - Online Transaction Processing  --> Data stored in Rows and columns --> similar to DB
+OLAP - Online Analytic Processing --> It is used to perform operation on data 
+
+
+Massive Parellel processing(MPP)
+-------------------------------------
+Red shift automatically distribute the query load across all the nodes
+Red shift makes it easiy to add nodes to your data warehouse and enables you to maintain fast query performance as your datawarehouse grows.
+
+
+
