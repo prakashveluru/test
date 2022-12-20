@@ -1,0 +1,24 @@
+cache is nothing but temperory memory.
+
+- Elastic cache is used to increase performance of the website
+- By using cache we can make UI user friendly
+
+
+Elastic cache is used in between webservice and DB's
+
+2 types of Elastic cache
+1. Memcached
+2. Redis (open source) --free
+
+- Elasticache is a web service that makes it easy to deploy,
+operate, and scale an in-memory cache in the cloud.
+- The service improves the performance of web applications
+by allowing you to retrieve information from fast, managed,
+in-memory caches, instead of relying entirely on slower
+disk-based databases.
+- It can be used to significantly reduce latency and
+throughput for many read-heavy application workloads
+(such as social networking, gaming, media sharing and Q&A
+portals) or compute-intensive workloads.
+- Caching improves application performance by storing
+critical pieces of data in memory for low-latency access.
